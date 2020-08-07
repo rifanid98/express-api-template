@@ -13,11 +13,11 @@ const validationMiddleware = require('../middlewares/mdl_validation');
 /**
  * Load All Routes
  */
-const booksRouter = require('./r_books');
+const usersRouter = require('./r_users');
 
 /**
  * Fire the router
  */
-router.use('/books', validationMiddleware.xssEscape, authMiddleware.verifyJwtToken, booksRouter);
+router.use('/users', validationMiddleware.xssEscape, authMiddleware.verifyJwtToken, usersRouter);
 
 module.exports = router;
