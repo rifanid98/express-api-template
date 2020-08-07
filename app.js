@@ -40,16 +40,10 @@ global.appRoot = path.resolve(__dirname);
  * comment this code if you prefer to not use socket.io
  */
 io.on('connection', socket => {
-    // Example to get emit from socket.io client
-    socket.on('exampleMessage', (message) => {
-        console.log(message);
-    })
     // Socket.io client disconnect handling
     socket.on('disconnect', () => {
         console.log('disconnect')
     })
-    // Force socket.io client disconnect
-    socket.disconnect()
 });
 
 /**============================= CORS ============================= */
