@@ -16,11 +16,11 @@ const authMiddleware = require('../middlewares/mdl_auth');
  * Controllers
  */
 // load the controller
-const auth_controller = require('../controllers/c_auth');
+const authController = require('../controllers/c_auth');
 
 // register user
-router.post('/register', upload.none(), auth_controller.register);
-router.post('/login', upload.none(), auth_controller.login);
-router.post('/refreshtoken', upload.none(), auth_controller.refresh_token);
+router.post('/register', upload.none(), authController.register);
+router.post('/login', upload.none(), authController.login);
+router.post('/refreshtoken', upload.none(), authController.refresh_token);
 
 module.exports = router;
