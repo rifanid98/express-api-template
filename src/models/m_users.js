@@ -83,10 +83,41 @@ function getDataById(id) {
   })
 }
 
+function getFieldsName() {
+  return new Promise((resolve, reject) => {
+    conn.query(`DESCRIBE users`, function (error, result) {
+      //      conn.query(`DESCRIBE users`, function (error, result) {
+      if (error) {
+        reject(error);
+      }
+      let fields = {};
+      result.forEach(field => {
+        fields[field.Field] = field.Field;
+      });
+      resolve(fields);
+    })
+  })
+
+}
+
+function getTotalData() {
+  return new Promise((resolve, reject) => {
+    conn.query(`SELECT COUNT(id) AS total_data FROM users`, function (error, result) {
+      //      conn.query(`DESCRIBE users`, function (error, result) {
+      if (error) {
+        reject(error);
+      }
+      resolve(result[0].total_data);
+    })
+  })
+
+}
 module.exports = {
   getData,
   addData,
   updateData,
   deleteData,
   getDataById,
+  getFieldsName,
+  getTotalData
 }
