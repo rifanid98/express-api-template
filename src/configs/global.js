@@ -8,7 +8,7 @@ const config = {
   jwtSecretKey: process.env.JWT_KEY,
   jwtTokenLoginLifeTime: '7d',
   jwtTokenRefreshLifeTime: '7d',
-  rootProjectPath: 'libraryapp-api',
+  rootProjectPath: process.env.ROOT_PATH,
   imageUrlPath: function (req) {
     return `${req.protocol}://${req.get("host")}/${this.rootProjectPath}/images/`;
   }
