@@ -1,6 +1,6 @@
 
-# Created by https://www.toptal.com/developers/gitignore/api/linux,visualstudiocode,node,macos
-# Edit at https://www.toptal.com/developers/gitignore?templates=linux,visualstudiocode,node,macos
+# Created by https://www.toptal.com/developers/gitignore/api/node,visualstudiocode,linux,macos
+# Edit at https://www.toptal.com/developers/gitignore?templates=node,visualstudiocode,linux,macos
 
 ### Linux ###
 *~
@@ -166,4 +166,4 @@ dist
 # Ignore all local history of files
 .history
 
-# End of https://www.toptal.com/developers/gitignore/api/linux,visualstudiocode,node,macos
+# End of https://www.toptal.com/developers/gitignore/api/node,visualstudiocode,linux,macos
