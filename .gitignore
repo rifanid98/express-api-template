@@ -166,4 +166,5 @@ dist
 # Ignore all local history of files
 .history
 
+src/assets/images/
 # End of https://www.toptal.com/developers/gitignore/api/node,visualstudiocode,linux,macos
