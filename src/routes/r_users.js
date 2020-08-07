@@ -30,9 +30,17 @@ router.patch('/:id', upload.single('image'), usersController.patchUser);
 router.delete('/:id', usersController.deleteUser);
 
 /**
- * Ext CRUD
+ * Other CRUD
  */
 // Get User By ID
 router.get('/:id', usersController.getUserById);
+
+/**
+ * Use authMiddleware example.
+ * 1. Admin
+ * 2. Staff
+ * 3. User
+ */
+// router.get('/', authMiddleware.checkRole([3, 2, 1]), booksController.getUsers);
 
 module.exports = router;
